@@ -7,8 +7,10 @@
 // -----------------------------------------------------------------------
 
 using AutoMapper;
-
+using OSharp.Demo.Dtos.Games;
 using OSharp.Demo.Dtos.Identity;
+using OSharp.Demo.Dtos.Security;
+using OSharp.Demo.Models.Games;
 using OSharp.Demo.Models.Identity;
 
 
@@ -22,6 +24,12 @@ namespace OSharp.Demo.Dtos
             Mapper.CreateMap<OrganizationDto, Organization>();
             Mapper.CreateMap<UserDto, User>();
             Mapper.CreateMap<RoleDto, Role>();
+            
+            //Game
+            Mapper.CreateMap<GameDto, Game>();
+            Mapper.CreateMap<MapDto, Map>();
+            Mapper.CreateMap<MemoryDto, Memory>();
+            Mapper.CreateMap<PointDto, Point>();
         }
     }
 }

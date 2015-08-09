@@ -393,6 +393,14 @@
     <Content Include="Areas\Admin\Views\Roles\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Organizations\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_TreeGridLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\EntityInfos\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Functions\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Games\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Logging\OperateLogs.cshtml" />
+    <Content Include="Areas\Admin\Views\Logging\SystemLogs.cshtml" />
+    <Content Include="Areas\Admin\Views\Maps\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Memorys\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Points\Index.cshtml" />
     <None Include="Scripts\jquery-1.11.1.intellisense.js" />
     <Content Include="Scripts\easyloader.js" />
     <Content Include="Scripts\jquery-1.11.1.js" />
@@ -435,10 +443,15 @@
   <ItemGroup>
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminBaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Game\GamesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Game\MapsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Game\MemorysController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Game\PointsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\Identity\OrganizationsController.cs" />
     <Compile Include="Areas\Admin\Controllers\Identity\RolesController.cs" />
     <Compile Include="Areas\Admin\Controllers\Identity\UsersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Systems\LoggingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -449,21 +462,25 @@
     <Compile Include="ViewModels\TreeNode.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\OSharp.Core.Data.Entity\OSharp.Core.Data.Entity.NET45.csproj">
-      <Project>{d58a373c-1a9c-4bf7-833d-427e4aef8502}</Project>
-      <Name>OSharp.Core.Data.Entity.NET45</Name>
+    <ProjectReference Include="..\..\Osharp.SiteBase\Osharp.SiteBase.csproj">
+      <Project>{8960ea36-4fab-468f-8093-e60b6d2b07a0}</Project>
+      <Name>Osharp.SiteBase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\OSharp.Core\OSharp.Core.NET45.csproj">
+    <ProjectReference Include="..\..\src\OSharp.Core.Data.Entity\OSharp.Core.Data.Entity.csproj">
+      <Project>{d58a373c-1a9c-4bf7-833d-427e4aef8502}</Project>
+      <Name>OSharp.Core.Data.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\OSharp.Core\OSharp.Core.csproj">
       <Project>{f7c67c95-facb-4160-9a88-cb738e65e034}</Project>
-      <Name>OSharp.Core.NET45</Name>
+      <Name>OSharp.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\src\OSharp.Utility\OSharp.Utility.csproj">
       <Project>{946e0a0a-8280-46b3-893e-1b00a554ccab}</Project>
       <Name>OSharp.Utility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\OSharp.Web\OSharp.Web.NET45.csproj">
+    <ProjectReference Include="..\..\src\OSharp.Web\OSharp.Web.csproj">
       <Project>{d2ac8387-fc21-4e8e-810b-c0a637d44222}</Project>
-      <Name>OSharp.Web.NET45</Name>
+      <Name>OSharp.Web</Name>
     </ProjectReference>
     <ProjectReference Include="..\OSharp.Demo.Contracts\OSharp.Demo.Contracts.csproj">
       <Project>{2e6d22c7-37d5-4f1f-8d3e-2bcbd8f71b88}</Project>
@@ -474,7 +491,9 @@
       <Name>OSharp.Demo.Services</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\Security\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

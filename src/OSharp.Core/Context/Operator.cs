@@ -28,7 +28,10 @@ namespace OSharp.Core.Context
         /// 获取或设置 当前用户名称
         /// </summary>
         public string Name { get; set; }
-
+        /// <summary>
+        /// 获取或设置 当前用户昵称
+        /// </summary>
+        public string NickName { get; set; }
         /// <summary>
         /// 获取或设置 当前访问IP
         /// </summary>

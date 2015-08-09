@@ -84,6 +84,7 @@
     <Compile Include="Caching\RuntimeMemoryCacheProvider.cs" />
     <Compile Include="Context\Operator.cs" />
     <Compile Include="Context\OSharpContext.cs" />
+    <Compile Include="Data\ICreatedTime.cs" />
     <Compile Include="Data\IEntityDto.cs" />
     <Compile Include="Data\EntityBase.cs" />
     <Compile Include="Data\Extensions\CollectionExtensions.cs" />
@@ -95,8 +96,10 @@
     <Compile Include="Identity\IUserRoleMap.cs" />
     <Compile Include="IDependency.cs" />
     <Compile Include="Logging\DataLog.cs" />
+    <Compile Include="Logging\DataLogItem.cs" />
     <Compile Include="Logging\LogBase.cs" />
     <Compile Include="Logging\OperateLog.cs" />
+    <Compile Include="Logging\OperatingType.cs" />
     <Compile Include="Logging\SystemLog.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

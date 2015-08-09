@@ -50,11 +50,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IGameContract.cs" />
     <Compile Include="Contracts\IIdentityContract.cs" />
+    <Compile Include="Contracts\ILoggingContract.cs" />
     <Compile Include="Dtos\DtoMappers.cs" />
+    <Compile Include="Dtos\Games\GameDto.cs" />
+    <Compile Include="Dtos\Games\MapDto.cs" />
+    <Compile Include="Dtos\Games\MemoryDto.cs" />
+    <Compile Include="Dtos\Games\PointDto.cs" />
     <Compile Include="Dtos\Identity\OrganizationDto.cs" />
     <Compile Include="Dtos\Identity\RoleDto.cs" />
     <Compile Include="Dtos\Identity\UserDto.cs" />
+    <Compile Include="Dtos\Security\EntityInfoDto.cs" />
+    <Compile Include="Dtos\Security\FunctionDto.cs" />
+    <Compile Include="Dtos\Softwares\Software.cs" />
+    <Compile Include="Dtos\Systems\LoginLogDto.cs" />
+    <Compile Include="Dtos\Systems\OperateLog.cs" />
+    <Compile Include="Dtos\Systems\SystemLog.cs" />
+    <Compile Include="Models\Games\Game.cs" />
+    <Compile Include="Models\Games\GameRole.cs" />
+    <Compile Include="Models\Games\Map.cs" />
+    <Compile Include="Models\Games\Memory.cs" />
+    <Compile Include="Models\Games\Point.cs" />
     <Compile Include="Models\Identity\Organization.cs" />
     <Compile Include="Models\Identity\Role.cs" />
     <Compile Include="Models\Identity\User.cs" />
@@ -62,9 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\OSharp.Core\OSharp.Core.NET45.csproj">
+    <ProjectReference Include="..\..\src\OSharp.Core\OSharp.Core.csproj">
       <Project>{f7c67c95-facb-4160-9a88-cb738e65e034}</Project>
-      <Name>OSharp.Core.NET45</Name>
+      <Name>OSharp.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\src\OSharp.Utility\OSharp.Utility.csproj">
       <Project>{946e0a0a-8280-46b3-893e-1b00a554ccab}</Project>
